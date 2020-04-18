@@ -43,11 +43,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="BusinessUnit\Controller\Evaluation\ArithmeticMean.cs" />
+    <Compile Include="BusinessUnit\Controller\Evaluation\Median.cs" />
+    <Compile Include="BusinessUnit\Controller\Manipulate\AddEntry.cs" />
+    <Compile Include="BusinessUnit\Controller\Manipulate\AlterEntry.cs" />
+    <Compile Include="BusinessUnit\Controller\Manipulate\DeleteEntry.cs" />
+    <Compile Include="BusinessUnit\Controller\Manipulate\Export.cs" />
+    <Compile Include="BusinessUnit\Controller\Manipulate\Import.cs" />
+    <Compile Include="BusinessUnit\Controller\Showing\BinarySearch.cs" />
+    <Compile Include="BusinessUnit\Controller\Showing\BubbleSort.cs" />
+    <Compile Include="BusinessUnit\Controller\Showing\LinearSearch.cs" />
+    <Compile Include="BusinessUnit\Controller\Showing\QuickSort.cs" />
+    <Compile Include="BusinessUnit\Controller\Showing\ShowData.cs" />
+    <Compile Include="BusinessUnit\Helpers\ShowSomeMenu.cs" />
+    <Compile Include="run.cs" />
+    <Compile Include="main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
