@@ -16,6 +16,18 @@ namespace weatherStation
     {
         static void AddEntry(ref Record[] weatherData, int entryPosition, ref Record newEntry)
         {
+            if (entryPosition != -1)
+            {
+                MakeASpotForNewRecord(ref weatherData, entryPosition);
+                weatherData[entryPosition].humidity = newEntry.humidity;
+                weatherData[entryPosition].airPressure = newEntry.airPressure;
+                weatherData[entryPosition].airTemperature = newEntry.airTemperature;
+                weatherData[entryPosition].date = newEntry.date;
+            }
+            else
+            {
+                weatherData[FindLastRecordPlusOne(ref weatherData)] = newEntry;
+            }
         }
     }
 }

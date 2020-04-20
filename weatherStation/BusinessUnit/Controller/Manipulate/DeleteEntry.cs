@@ -14,8 +14,13 @@ namespace weatherStation
 {
     partial class main
     {
-        static int DeleteEntry(ref Record[] weatherData, int entryPosition)
+        static void DeleteEntry(ref Record[] weatherData, int entryPosition)
         {
+
+            weatherData[entryPosition].date = "";
+            weatherData[entryPosition].airTemperature = 0.00;
+            weatherData[entryPosition].airPressure = 0;
+            weatherData[entryPosition].humidity = 0;
 
         }
     }

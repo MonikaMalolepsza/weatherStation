@@ -14,9 +14,11 @@ namespace weatherStation
 {
     partial class main
     {
-        static int BinarySearch(ref Record[] weatherData, int SearchParameter, string searchValue)
-        {
+            static int BinarySearch(ref Record[] weatherData, int SearchParameter, string searchValue)
+            {
 
-        }
+                
+
+            }
     }
 }
