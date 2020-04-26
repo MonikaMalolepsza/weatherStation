@@ -19,10 +19,10 @@ namespace weatherStation
             if (entryPosition != -1)
             {
                 MakeASpotForNewRecord(ref weatherData, entryPosition);
-                weatherData[entryPosition].humidity = newEntry.humidity;
-                weatherData[entryPosition].airPressure = newEntry.airPressure;
-                weatherData[entryPosition].airTemperature = newEntry.airTemperature;
-                weatherData[entryPosition].date = newEntry.date;
+                weatherData[entryPosition].Humidity = newEntry.Humidity;
+                weatherData[entryPosition].AirPressure = newEntry.AirPressure;
+                weatherData[entryPosition].AirTemperature = newEntry.AirTemperature;
+                weatherData[entryPosition].Date = newEntry.Date;
             }
             else
             {

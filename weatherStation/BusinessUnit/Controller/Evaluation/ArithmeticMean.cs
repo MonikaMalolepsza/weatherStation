@@ -16,7 +16,8 @@ namespace weatherStation
     {
         static double ArithmeticMean(ref Record[] weatherData, int calculationParameter)
         {
-            
+            return 0;
+
         }
     }
 }

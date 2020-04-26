@@ -9,7 +9,7 @@ namespace weatherStation
 
             for (int i = 0; i < weatherData.Length; i++)
             {
-                if (weatherData[i].date == "")
+                if (weatherData[i].Date == "")
                 {
                     return i;
                 }

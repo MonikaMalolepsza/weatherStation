@@ -1,0 +1,6 @@
+/Users/monika/Projects/c#/weatherStation2/weatherStation/obj/Debug/weatherStation.csprojAssemblyReference.cache
+/Users/monika/Projects/c#/weatherStation2/weatherStation/bin/Debug/weatherStation.exe.config
+/Users/monika/Projects/c#/weatherStation2/weatherStation/bin/Debug/weatherStation.exe
+/Users/monika/Projects/c#/weatherStation2/weatherStation/bin/Debug/weatherStation.pdb
+/Users/monika/Projects/c#/weatherStation2/weatherStation/obj/Debug/weatherStation.exe
+/Users/monika/Projects/c#/weatherStation2/weatherStation/obj/Debug/weatherStation.pdb

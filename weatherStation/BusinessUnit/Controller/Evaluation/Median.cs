@@ -16,7 +16,9 @@ namespace weatherStation
     partial class main
     {
         static double Median(ref Record[] weatherData, int calculationParameter)
-        {            
+        {
+            return 0;
+
         }
     }
 }

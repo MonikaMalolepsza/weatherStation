@@ -13,7 +13,7 @@ namespace weatherStation
 
                 for (int i = 1; i < weatherData.Length-1; i++)
                 {
-                    if (weatherData[i-1].date == "" && weatherData[i].date != "")
+                    if (weatherData[i-1].Date == "" && weatherData[i].Date != "")
                     {
                         countSwapped = true;
                         SwapRecords(ref weatherData, i, i-1);

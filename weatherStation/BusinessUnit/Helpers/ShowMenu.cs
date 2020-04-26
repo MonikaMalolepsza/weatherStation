@@ -9,45 +9,50 @@
 
 using System;
 
-partial class main
+namespace weatherStation
 {
-    static int  ShowMenu(ref string[] MenuPoints, string Headline)
+
+    partial class main
     {
-        int currentItem = 0;
-        ConsoleKeyInfo key = new ConsoleKeyInfo();
-
-        do
+        static int ShowMenu(ref string[] MenuPoints, string Headline)
         {
-            Console.Clear();
-            Console.WriteLine(Headline + "\n");
+            int currentItem = 0;
+            ConsoleKeyInfo key = new ConsoleKeyInfo();
 
-            for (int counter = 0; counter < MenuPoints.Length; counter++)
+            do
             {
-                if (currentItem == counter)
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine(MenuPoints[counter]);
-                    Console.ForegroundColor = ConsoleColor.White;
-                }
-                else
-                {
-                    Console.WriteLine(MenuPoints[counter]);
-                }
-            }
+                Console.Clear();
+                Console.WriteLine(Headline + "\n");
 
-            Console.WriteLine("\n\nYou can navigate with the arrow keys.\nConfirm your entry with the return key.");
-            key = Console.ReadKey(true);
-            if (key.Key.ToString() == "DownArrow")
-            {
-                currentItem++;
-                if (currentItem > MenuPoints.Length - 1) currentItem = 0;
-            }
-            else if (key.Key.ToString() == "UpArrow")
-            {
-                currentItem--;
-                if (currentItem < 0) currentItem = MenuPoints.Length - 1;
-            }
-        } while (key.Key.ToString() != "Enter");
-        return currentItem;
+                for (int counter = 0; counter < MenuPoints.Length; counter++)
+                {
+                    if (currentItem == counter)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine(MenuPoints[counter]);
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    else
+                    {
+                        Console.WriteLine(MenuPoints[counter]);
+                    }
+                }
+
+                Console.WriteLine("\n\nYou can navigate with the arrow keys.\nConfirm your entry with the return key.");
+                key = Console.ReadKey(true);
+                if (key.Key.ToString() == "DownArrow")
+                {
+                    currentItem++;
+                    if (currentItem > MenuPoints.Length - 1) currentItem = 0;
+                }
+                else if (key.Key.ToString() == "UpArrow")
+                {
+                    currentItem--;
+                    if (currentItem < 0) currentItem = MenuPoints.Length - 1;
+                }
+            } while (key.Key.ToString() != "Enter");
+
+            return currentItem;
+        }
     }
 }

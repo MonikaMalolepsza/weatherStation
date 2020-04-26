@@ -16,7 +16,7 @@ namespace weatherStation
     {
         static int LinearSearch(ref Record[] weatherData, int SearchParameter, string searchValue)
         {
-
+            return 0;
         }
     }
 }

@@ -17,15 +17,20 @@ namespace weatherStation
     {
         struct Record
         {
-             public string date;
-             public double airTemperature;
-             public uint airPressure;
-             public uint humidity;
+             public string Date;
+             public double AirTemperature;
+             public uint AirPressure;
+             public uint Humidity;
         }
 
         static void run()
         {
             Record[] weatherData = new Record[366];
+
+            //initialize dummy data
+            RandomDataGenerator(ref weatherData, 360);
+
+            MainMenu(ref weatherData);
 
         }
 

@@ -17,10 +17,10 @@ namespace weatherStation
         static void DeleteEntry(ref Record[] weatherData, int entryPosition)
         {
 
-            weatherData[entryPosition].date = "";
-            weatherData[entryPosition].airTemperature = 0.00;
-            weatherData[entryPosition].airPressure = 0;
-            weatherData[entryPosition].humidity = 0;
+            weatherData[entryPosition].Date = "";
+            weatherData[entryPosition].AirTemperature = 0.00;
+            weatherData[entryPosition].AirPressure = 0;
+            weatherData[entryPosition].Humidity = 0;
 
         }
     }

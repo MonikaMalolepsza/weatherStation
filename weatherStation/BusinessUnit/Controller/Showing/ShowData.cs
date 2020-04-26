@@ -23,7 +23,7 @@ namespace weatherStation
             int numberRecordsFilled = 0;
             for (int i = 0; i < 366; i++)
             {
-                if (weatherData[i].date != "")
+                if (weatherData[i].Date != "")
                 {
                     numberRecordsFilled++;
                 }
@@ -51,37 +51,37 @@ namespace weatherStation
                     (pageContent < (currPage * 15 + 15)) && (pageContent < 366);
                     pageContent++)
                 {
-                    if (weatherData[pageContent].date != "")
+                    if (weatherData[pageContent].Date != "")
                     {
                         currentLine += new string(' ', 3 - (pageContent + 1).ToString().Length) + (pageContent + 1)
                                                                                              + "    " + weatherData[
-                                                                                                 pageContent].date
+                                                                                                 pageContent].Date
                                                                                              + new string(' ',
                                                                                                  8 + (3 - weatherData[
                                                                                                               pageContent]
-                                                                                                          .airTemperature
+                                                                                                          .AirTemperature
                                                                                                           .ToString(
                                                                                                               "N1")
                                                                                                           .Length)) +
                                                                                              weatherData[pageContent]
-                                                                                                 .airTemperature
+                                                                                                 .AirTemperature
                                                                                                  .ToString("N1") + "°C"
                                                                                              + new string(' ',
                                                                                                  15 + (3 - weatherData[
                                                                                                                pageContent]
-                                                                                                           .airPressure
+                                                                                                           .AirPressure
                                                                                                            .ToString()
                                                                                                            .Length)) +
                                                                                              weatherData[pageContent]
-                                                                                                 .airPressure + "HPa"
+                                                                                                 .AirPressure + "HPa"
                                                                                              + new string(' ',
                                                                                                  14 + (2 - weatherData[
                                                                                                                pageContent]
-                                                                                                           .humidity
+                                                                                                           .Humidity
                                                                                                            .ToString()
                                                                                                            .Length)) +
                                                                                              weatherData[pageContent]
-                                                                                                 .humidity + "%";
+                                                                                                 .Humidity + "%";
                         Console.WriteLine(currentLine);
                     }
 
@@ -132,7 +132,7 @@ namespace weatherStation
             int numberPagesFilled = 0;
             for (int i = 0; i < 366; i++)
             {
-                if (weatherData[i].date != "")
+                if (weatherData[i].Date != "")
                 {
                     numberPagesFilled++;
                 }
@@ -158,7 +158,7 @@ namespace weatherStation
                     (pageContent < (currPage * 15 + 15)) && (pageContent < 366);
                     pageContent++)
                 {
-                    if (weatherData[pageContent].date != "")
+                    if (weatherData[pageContent].Date != "")
                     {
                         if (pageContent == searchedEntry)
                         {
@@ -167,33 +167,33 @@ namespace weatherStation
 
                         currData += new string(' ', 3 - (pageContent + 1).ToString().Length) + (pageContent + 1)
                                                                                              + "    " + weatherData[
-                                                                                                 pageContent].date
+                                                                                                 pageContent].Date
                                                                                              + new string(' ',
                                                                                                  8 + (3 - weatherData[
                                                                                                               pageContent]
-                                                                                                          .airTemperature
+                                                                                                          .AirTemperature
                                                                                                           .ToString(
                                                                                                               "N1")
                                                                                                           .Length)) +
                                                                                              weatherData[pageContent]
-                                                                                                 .airTemperature
+                                                                                                 .AirTemperature
                                                                                                  .ToString("N1") + "°C"
                                                                                              + new string(' ',
                                                                                                  15 + (3 - weatherData[
                                                                                                                pageContent]
-                                                                                                           .airPressure
+                                                                                                           .AirPressure
                                                                                                            .ToString()
                                                                                                            .Length)) +
                                                                                              weatherData[pageContent]
-                                                                                                 .airPressure + "HPa"
+                                                                                                 .AirPressure + "HPa"
                                                                                              + new string(' ',
                                                                                                  14 + (2 - weatherData[
                                                                                                                pageContent]
-                                                                                                           .humidity
+                                                                                                           .Humidity
                                                                                                            .ToString()
                                                                                                            .Length)) +
                                                                                              weatherData[pageContent]
-                                                                                                 .humidity + "%";
+                                                                                                 .Humidity + "%";
                         Console.WriteLine(currData);
                         Console.ForegroundColor = ConsoleColor.White;
                     }

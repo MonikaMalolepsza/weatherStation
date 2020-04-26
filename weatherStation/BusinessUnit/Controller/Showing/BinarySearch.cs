@@ -17,7 +17,8 @@ namespace weatherStation
             static int BinarySearch(ref Record[] weatherData, int SearchParameter, string searchValue)
             {
 
-                
+                return 0;
+
 
             }
     }
