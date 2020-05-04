@@ -44,7 +44,7 @@ namespace weatherStation
             {
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine("Pos    Datum           Temperatur           Luftdruck           Luftfeuchtigkeit");
+                Console.WriteLine("Pos    Date            Temperature          Air pressure                Humidity");
                 Console.ForegroundColor = ConsoleColor.White;
 
                 for (int pageContent = currPage * 15;
@@ -75,7 +75,7 @@ namespace weatherStation
                                                                                              weatherData[pageContent]
                                                                                                  .AirPressure + "HPa"
                                                                                              + new string(' ',
-                                                                                                 14 + (2 - weatherData[
+                                                                                                 22 + (2 - weatherData[
                                                                                                                pageContent]
                                                                                                            .Humidity
                                                                                                            .ToString()
@@ -152,7 +152,7 @@ namespace weatherStation
             {
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Pos    Datum           Temperatur           Luftdruck           Luftfeuchtigkeit");
+                Console.WriteLine("Pos    Date            Temperature          Air pressure                Humidity");
                 Console.ForegroundColor = ConsoleColor.White;
                 for (int pageContent = currPage * 15;
                     (pageContent < (currPage * 15 + 15)) && (pageContent < 366);
@@ -203,13 +203,13 @@ namespace weatherStation
 
                 Console.SetCursorPosition(0, Console.BufferHeight - 6);
 
-                Console.Write("Schließen [esc]" + new string(' ', Console.BufferWidth - 28) + "Seite ");
+                Console.Write("Close [esc]" + new string(' ', Console.BufferWidth - 28) + "Page ");
                 Console.Write("[" + (currPage + 1 > 9 ? "" : "0") + (currPage + 1) + "/" +
                               (numberPagesFilled > 9 ? "" : "0") + numberPagesFilled + "]");
                 Console.WriteLine();
-                Console.WriteLine(new string(' ', 25) + ((currPage == 0) ? new string(' ', 15) : "Vorherige Seite") +
+                Console.WriteLine(new string(' ', 25) + ((currPage == 0) ? new string(' ', 15) : "Previous page") +
                                   "     " +
-                                  ((currPage == numberPagesFilled - 1) ? new string(' ', 13) : "Nächste Seite"));
+                                  ((currPage == numberPagesFilled - 1) ? new string(' ', 13) : "Next Page"));
                 Console.WriteLine(new string(' ', 37) + ((currPage == 0) ? "   " : "<--") + "     " +
                                   ((currPage == numberPagesFilled - 1) ? "   " : "-->"));
 

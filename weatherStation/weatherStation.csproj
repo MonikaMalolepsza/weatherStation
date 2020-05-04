@@ -63,6 +63,7 @@
     <Compile Include="BusinessUnit\Helpers\Defragment.cs" />
     <Compile Include="BusinessUnit\Helpers\FindLastRecordPlusOne.cs" />
     <Compile Include="BusinessUnit\Helpers\MakeASpotForNewRecord.cs" />
+    <Compile Include="BusinessUnit\Helpers\ParamMapping.cs" />
     <Compile Include="BusinessUnit\Helpers\RandomDataGenerator.cs" />
     <Compile Include="BusinessUnit\Helpers\showMenu.cs" />
     <Compile Include="BusinessUnit\Helpers\SwapRecords.cs" />

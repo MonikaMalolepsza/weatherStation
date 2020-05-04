@@ -14,9 +14,73 @@ namespace weatherStation
 {
     partial class main
     {
-        static int LinearSearch(ref Record[] weatherData, int SearchParameter, string searchValue)
-        {
-            return 0;
+       
+            static int LinearSearch(ref Record[] weatherData, int searchParameter, string searchValue)
+            {
+                int i = 0;
+                int upperBoarder = FindLastRecordPlusOne(ref weatherData);
+                if (searchParameter == 0)
+                {
+                    for (i = 0; i < upperBoarder; i++)
+                    {
+                        if (weatherData[i].Date == searchValue)
+                        {
+                            return i;
+                        }
+                        else
+                        {
+                            //empty
+                        }
+                    }
+                }
+                else if (searchParameter == 1)
+                {
+                    for (i = 0; i < upperBoarder; i++)
+                    {
+                        if (weatherData[i].AirTemperature == Convert.ToDouble(searchValue))
+                        {
+                            return i;
+                        }
+                        else
+                        {
+                            //empty
+                        }
+                    }
+                }
+                else if (searchParameter == 2)
+                {
+                    for (i = 0; i < upperBoarder; i++)
+                    {
+                        if (weatherData[i].AirPressure == Convert.ToInt32(searchValue))
+                        {
+                            return i;
+                        }
+                        else
+                        {
+                            //empty
+                        }
+                    }
+                }
+                else if (searchParameter == 3)
+                {
+                    for (i = 0; i < upperBoarder; i++)
+                    {
+                        if (weatherData[i].Humidity == Convert.ToInt32(searchValue))
+                        {
+                            return i;
+                        }
+                        else
+                        {
+                            //empty
+                        }
+                    }
+                }
+                else
+                {
+                    return -1;
+                }
+
+                return -1;
+            }
         }
-    }
 }
