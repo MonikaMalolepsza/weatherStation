@@ -27,6 +27,7 @@ namespace weatherStation
         {
             Record[] weatherData = new Record[366];
 
+            Splashinfo();
             //initialize dummy data
             RandomDataGenerator(ref weatherData, 360);
 
