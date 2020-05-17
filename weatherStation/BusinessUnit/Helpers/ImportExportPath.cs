@@ -51,7 +51,7 @@ namespace weatherStation
                 Console.WriteLine(errorShown);
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.CursorTop = 10;
-                Console.CursorLeft = 6 + path.Length;
+                Console.CursorLeft = 20 + path.Length;
 
                 ConsoleKeyInfo key = Console.ReadKey(true);
                 if (key.Key == ConsoleKey.Escape)

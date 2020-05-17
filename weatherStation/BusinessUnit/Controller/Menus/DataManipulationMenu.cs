@@ -83,6 +83,7 @@ namespace weatherStation
                                     newRecord.Humidity.ToString(), position.ToString()))
                                 {
                                     AlterEntry(ref weatherData, position, ref newRecord);
+                                    ShowFullData(ref weatherData);
                                     int anotherTry = ShowMenu(ref noYes,
                                         "Record has been edited.\r\nDo you want to edit another record?");
                                     if (anotherTry == 1)

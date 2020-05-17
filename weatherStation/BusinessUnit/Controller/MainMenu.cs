@@ -14,7 +14,7 @@ namespace weatherStation
         {
             bool activeMenu = true;
             string headline = "Main Menu";
-            string[] mainMenuPoints = { "Data display", "Data manipulation", "Data analyse", "Exit" };
+            string[] mainMenuPoints = { "Data display", "Data manipulation", "Data evaluation", "Exit" };
 
             do
             {
