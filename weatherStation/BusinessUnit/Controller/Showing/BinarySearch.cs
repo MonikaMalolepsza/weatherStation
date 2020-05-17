@@ -14,11 +14,106 @@ namespace weatherStation
 {
     partial class main
     {
-            static int BinarySearch(ref Record[] weatherData, int SearchParameter, string searchValue)
+            static int BinarySearch(ref Record[] weatherData, int searchParameter, string searchValue)
             {
 
-                return 0;
+                SelectionSort(ref weatherData, searchParameter);
 
+                int arrLength = FindLastRecordPlusOne(ref weatherData);
+
+                int pivot = 0;
+                int lowerBorder = 0;
+                int upperBorder = arrLength;
+
+                switch (searchParameter)
+                {
+                    case 0:
+
+                        while (lowerBorder <= upperBorder)
+                        {
+                            pivot = lowerBorder + ((upperBorder - lowerBorder) / 2);
+
+                            if (searchValue == weatherData[pivot].Date)
+                            {
+                                return pivot;
+                            }
+                            else if (CompareDates(searchValue, weatherData[pivot].Date))
+                            {
+                                lowerBorder = pivot + 1;
+                            }
+                            else
+                            {
+                                upperBorder = pivot - 1;
+                            }
+                        }
+
+                        break;
+
+
+                    case 1:
+
+                        while (lowerBorder <= upperBorder)
+                        {
+                            pivot = lowerBorder + ((upperBorder - lowerBorder) / 2);
+
+                            if (Convert.ToDouble(searchValue) == weatherData[pivot].AirTemperature)
+                            {
+                                return pivot;
+                            }
+                            else if (Convert.ToDouble(searchValue) > weatherData[pivot].AirTemperature)
+                            {
+                                lowerBorder = pivot + 1;
+                            }
+                            else
+                            {
+                                upperBorder = pivot - 1;
+                            }
+                        }
+                        break;
+                    case 2:
+                        while (lowerBorder <= upperBorder)
+                        {
+                            pivot = lowerBorder + ((upperBorder - lowerBorder) / 2);
+
+                            if (Convert.ToInt32(searchValue) == weatherData[pivot].AirPressure)
+                            {
+                                return pivot;
+                            }
+                            else if (Convert.ToInt32(searchValue) > weatherData[pivot].AirPressure)
+                            {
+                                lowerBorder = pivot + 1;
+                            }
+                            else
+                            {
+                                upperBorder = pivot - 1;
+                            }
+                        }
+
+                        break;
+
+                    case 3:
+                        while (lowerBorder <= upperBorder)
+                        {
+                            pivot = lowerBorder + ((upperBorder - lowerBorder) / 2);
+
+                            if (Convert.ToInt32(searchValue) == weatherData[pivot].Humidity)
+                            {
+                                return pivot;
+                            }
+                            else if (Convert.ToInt32(searchValue) > weatherData[pivot].Humidity)
+                            {
+                                lowerBorder = pivot + 1;
+                            }
+                            else
+                            {
+                                upperBorder = pivot - 1;
+                            }
+                        }
+
+                        break;
+                }
+
+                return -1;
 
             }
     }

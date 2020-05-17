@@ -41,6 +41,7 @@ namespace weatherStation
                                 else
                                 {
                                     BubbleSort(ref weatherData, parameterSelection);
+                                    ShowFullData(ref weatherData);
 
                                     parameterSelectionActive = false;
                                     sortingProcessActive = false;
@@ -50,7 +51,7 @@ namespace weatherStation
                         }
                         else if (selectedSortAlgorithm == 1)
                         {
-                            bool parameterSelectionActive = true;
+                            bool parameterSelectionActive2 = true;
 
                             do
                             {
@@ -59,15 +60,17 @@ namespace weatherStation
                                 if (parameterSelection == 4)
                                 {
                                     //back
-                                    parameterSelectionActive = false;
+                                    parameterSelectionActive2 = false;
                                 }
                                 else
                                 {
                                     SelectionSort(ref weatherData, parameterSelection);
-                                    parameterSelectionActive = false;
+                                    ShowFullData(ref weatherData);
+                                    sortingProcessActive = false;
+                                    parameterSelectionActive2 = false;
                                 }
 
-                            } while (parameterSelectionActive);
+                            } while (parameterSelectionActive2);
                         }
                         else if (selectedSortAlgorithm == 2)
                         {
@@ -104,6 +107,7 @@ namespace weatherStation
                                 else
                                 {
                                     bool searchProcess = true;
+
                                     do
                                     {
                                         Console.Clear();
@@ -116,6 +120,7 @@ namespace weatherStation
                                             Console.WriteLine("Error: Record not existing.");
                                             Console.ReadKey(true);
                                             searchProcess = false;
+                                            parameterSelectionActive = false;
 
                                         }
                                         else
@@ -123,7 +128,6 @@ namespace weatherStation
                                             ShowFullData(ref weatherData, positionOfItem);
                                             searchProcess = false;
                                             parameterSelectionActive = false;
-                                            searchingProcess = false;
                                         }
                                     } while (searchProcess);
                                 }
@@ -134,10 +138,54 @@ namespace weatherStation
                         else if (selectedAlgorithm == 1)
                         {
                             //Binary search
+                            bool parameterSelectionActive = true;
+
+                            do
+                            {
+                                int parameterSelection = ShowMenu(ref sortingParams, "Choose searching parameter:");
+
+                                if (parameterSelection == 4)
+                                {
+                                    //back
+                                    parameterSelectionActive = false;
+                                }
+                                else
+                                {
+                                    bool searchProcessBinary = true;
+
+                                    do
+                                    {
+                                        Console.Clear();
+                                        Console.WriteLine("Please enter the search value for the parameter " + ParamMapping(parameterSelection));
+                                        string userInput = Console.ReadLine();
+                                        int positionOfItem = BinarySearch(ref weatherData, parameterSelection, userInput);
+                                        Console.Clear();
+                                        if (positionOfItem == -1)
+                                        {
+                                            Console.WriteLine("Error: Record not existing.");
+                                            Console.ReadKey(true);
+                                            searchProcessBinary = false;
+                                            parameterSelectionActive = false;
+
+                                        }
+                                        else
+                                        {
+                                            ShowFullData(ref weatherData, positionOfItem);
+                                            searchProcessBinary = false;
+                                            parameterSelectionActive = false;
+                                        }
+                                    } while (searchProcessBinary);
+                                }
+
+                            } while (parameterSelectionActive);
+
+                        }
+                        else
+                        {
+                            searchingProcess = false;
                         }
 
                     } while (searchingProcess);
-                    //search data
 
                 }
                 else if (choice == 2)

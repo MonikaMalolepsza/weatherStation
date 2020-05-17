@@ -16,8 +16,33 @@ namespace weatherStation
     {
         static double ArithmeticMean(ref Record[] weatherData, int calculationParameter)
         {
-            return 0;
+            double mean = 0;
+            int numberElements;
+            int upperBorder = FindLastRecordPlusOne(ref weatherData);
+            switch (calculationParameter)
+            {
+                case 0:
+                    for (numberElements = 0; numberElements < upperBorder; numberElements++)
+                    {
+                        mean += weatherData[numberElements].AirTemperature;
+                    }
+                    break;
+                case 1:
+                    for (numberElements = 0; numberElements < upperBorder; numberElements++)
+                    {
+                        mean += weatherData[numberElements].AirPressure;
+                    }
+                    break;
+                case 2:
+                    for (numberElements = 0; numberElements < upperBorder; numberElements++)
+                    {
+                        mean += weatherData[numberElements].Humidity;
+                    }
+                    break;
+                default: return -1;
+            }
 
+            return mean / numberElements;
         }
     }
 }
