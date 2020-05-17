@@ -1,3 +1,11 @@
+//Autor:        Monika Malolepsza
+//Klasse:       IA119
+//Datei:        Defragment.cs
+//Datum:        16.05.2020
+//Beschreibung:
+//Aenderungen:  16.05.2020 Erstellung
+
+
 namespace weatherStation
 {
     partial class main

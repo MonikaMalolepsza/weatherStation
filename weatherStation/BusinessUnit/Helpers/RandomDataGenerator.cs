@@ -1,3 +1,9 @@
+//Autor:        Monika Malolepsza
+//Klasse:       IA119
+//Datei:        RandomDataGenerator.cs
+//Datum:        23.04.2020
+//Beschreibung:
+//Aenderungen:  23.04.2020 Erstellung
 
 using System;
 

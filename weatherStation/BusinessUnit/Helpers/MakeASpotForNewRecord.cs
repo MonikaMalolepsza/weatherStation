@@ -1,3 +1,10 @@
+//Autor:        Monika Malolepsza
+//Klasse:       IA119
+//Datei:        MakeASpotForNewRecord.cs
+//Datum:        20.04.2020
+//Beschreibung:
+//Aenderungen:  20.04.2020 Erstellung
+
 namespace weatherStation
 {
     partial class main

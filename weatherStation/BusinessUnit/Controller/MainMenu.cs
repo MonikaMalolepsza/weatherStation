@@ -1,5 +1,9 @@
-
-using System;
+//Autor:        Monika Malolepsza
+//Klasse:       IA119
+//Datei:        MainMenu.cs
+//Datum:        23.04.2020
+//Beschreibung:
+//Aenderungen:  23.04.2020 Erstellung
 
 namespace weatherStation
 {
@@ -26,7 +30,7 @@ namespace weatherStation
                 }
                 else if (menuChoice == 2)
                 {
-                    DataAnalyseMenu(ref weatherData);
+                    DataEvaluationMenu(ref weatherData);
                 }
                 else if (menuChoice == 3)
                 {

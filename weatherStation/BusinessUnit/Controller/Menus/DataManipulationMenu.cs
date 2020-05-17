@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 
 namespace weatherStation
@@ -42,7 +43,7 @@ namespace weatherStation
                             }
                             else
                             {
-                                //Nothing
+                                //Empty
                             }
                         }
                         else
@@ -71,7 +72,7 @@ namespace weatherStation
                                 }
                                 else
                                 {
-                                    //nothing
+                                    //Empty
                                 }
                             }
                             else
@@ -90,7 +91,7 @@ namespace weatherStation
                                     }
                                     else
                                     {
-                                        //nothing
+                                        //Empty
                                     }
                                 }
                             }
@@ -121,7 +122,7 @@ namespace weatherStation
                                 }
                                 else
                                 {
-                                    //nothing
+                                    //Empty
                                 }
                             }
                             else
@@ -135,7 +136,7 @@ namespace weatherStation
                                 }
                                 else
                                 {
-                                    //nothing
+                                    //Empty
                                 }
                             }
                         }
@@ -148,10 +149,56 @@ namespace weatherStation
                 else if (selection == 3)
                 {
                     //Import Data
+                    if (ImportExportPath(true, ref path))
+                    {
+                        if (ShowMenu(ref noYes, "Are you sure you want to import this file?\r\nExisting records will be permanently deleted,\r\nif no data backup exists.") == 0)
+                        {
+                            Console.Clear();
+                            string error = ImportData(ref weatherData, path);
+                            Console.WriteLine("Import completed!");
+                            if (error != "")
+                            {
+                                Console.WriteLine(error);
+                            }
+                            else
+                            {
+                                //Empty
+                            }
+                            Console.SetCursorPosition(Console.CursorLeft, Console.WindowHeight - 2);
+                            Console.WriteLine("Press any button to continue.");
+                            Console.ReadKey(true);
+                        }
+                        else
+                        {
+                            //Empty
+                        }
+                    }
+                    else
+                    {
+                        //Empty
+                    }
+
                 }
                 else if (selection == 4)
                 {
                     //Export Data
+                    if (ImportExportPath(false, ref path))
+                    {
+                        ExportData(ref weatherData, path);
+                        Console.Clear();
+                        Console.WriteLine("Export completed!");
+                        Console.WriteLine("The file is located in the following directory:\r\n");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine(path.Substring(0, path.LastIndexOf("/")));
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.SetCursorPosition(Console.CursorLeft, Console.WindowHeight - 2);
+                        Console.WriteLine("Press any button to continue.");
+                        Console.ReadKey(true);
+                    }
+                    else
+                    {
+                        //empty
+                    }
                 }
                 else if (selection == 5)
                 {

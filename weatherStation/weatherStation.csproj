@@ -49,9 +49,9 @@
     <Compile Include="BusinessUnit\Controller\Manipulate\AddEntry.cs" />
     <Compile Include="BusinessUnit\Controller\Manipulate\AlterEntry.cs" />
     <Compile Include="BusinessUnit\Controller\Manipulate\DeleteEntry.cs" />
-    <Compile Include="BusinessUnit\Controller\Manipulate\Export.cs" />
-    <Compile Include="BusinessUnit\Controller\Manipulate\Import.cs" />
-    <Compile Include="BusinessUnit\Controller\Menus\DataAnalyseMenu.cs" />
+    <Compile Include="BusinessUnit\Controller\Manipulate\ExportData.cs" />
+    <Compile Include="BusinessUnit\Controller\Manipulate\ImportData.cs" />
+    <Compile Include="BusinessUnit\Controller\Menus\DataEvaluationMenu.cs" />
     <Compile Include="BusinessUnit\Controller\Menus\DataDisplayMenu.cs" />
     <Compile Include="BusinessUnit\Controller\Menus\DataManipulationMenu.cs" />
     <Compile Include="BusinessUnit\Controller\Showing\BinarySearch.cs" />
@@ -62,7 +62,9 @@
     <Compile Include="BusinessUnit\Controller\Showing\ShowData.cs" />
     <Compile Include="BusinessUnit\Helpers\DateFormatInputValidator.cs" />
     <Compile Include="BusinessUnit\Helpers\Defragment.cs" />
+    <Compile Include="BusinessUnit\Helpers\DeleteAllData.cs" />
     <Compile Include="BusinessUnit\Helpers\FindLastRecordPlusOne.cs" />
+    <Compile Include="BusinessUnit\Helpers\ImportExportPath.cs" />
     <Compile Include="BusinessUnit\Helpers\InputEntryManipulation.cs" />
     <Compile Include="BusinessUnit\Helpers\InputEntryPosition.cs" />
     <Compile Include="BusinessUnit\Helpers\MakeASpotForNewRecord.cs" />

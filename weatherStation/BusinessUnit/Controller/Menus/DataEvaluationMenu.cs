@@ -1,3 +1,10 @@
+//Autor:        Monika Malolepsza
+//Klasse:       IA119
+//Datei:        DataEvaluationMenu.cs
+//Datum:        18.04.2020
+//Beschreibung:
+//Aenderungen:  18.04.2020 Erstellung
+
 using System;
 
 namespace weatherStation
@@ -5,7 +12,7 @@ namespace weatherStation
 
     partial class main
     {
-        static void DataAnalyseMenu(ref Record[] weatherData)
+        static void DataEvaluationMenu(ref Record[] weatherData)
         {
             bool menueActive = true;
             bool parameterSelectionActive;
@@ -18,6 +25,7 @@ namespace weatherStation
                 parameterSelectionActive = true;
                 int selection = ShowMenu(ref evaluateValues, "Please select an evaluation method.");
                 if (selection == 0)
+                    //Arithmetic mean
                 {
                     do
                     {
@@ -33,6 +41,7 @@ namespace weatherStation
                     } while (parameterSelectionActive);
                 }
                 else if (selection == 1)
+                    //Median
                 {
                     do
                     {

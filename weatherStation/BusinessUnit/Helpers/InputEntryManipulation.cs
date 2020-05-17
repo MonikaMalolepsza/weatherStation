@@ -1,9 +1,9 @@
-
 //Autor:        Monika Malolepsza
 //Klasse:       IA119
 //Datei:        InputEntryManipulation.cs
 //Datum:        10.05.2020
 //Aenderungen:  10.05.2020 Erstellung
+
 using System;
 
 namespace weatherStation
